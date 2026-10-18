@@ -38,6 +38,17 @@ npm install -g homebridge-wonderfree-fan
 
 Add the platform to `config.json` (see [Configuration](#configuration)) and restart Homebridge.
 
+### From a source checkout
+
+Before the npm release, install the checkout into the Homebridge storage:
+
+```bash
+cd ~/.homebridge   # or /var/lib/homebridge in Docker
+npm install /path/to/homebridge-wonderfree-fan
+```
+
+Then run the key helper from that checkout with `node tools/fetch-key.js ...`.
+
 ## One-time authKey setup
 
 The fan's local control key is a 16-byte AES secret held by the vendor cloud account that has the fan bound. Fetch it once:

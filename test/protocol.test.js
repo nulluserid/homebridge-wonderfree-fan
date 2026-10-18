@@ -57,8 +57,9 @@ test('discoverFan resolves a local responder by MAC', async (t) => {
   server.on('message', (msg, rinfo) => server.send(reply, rinfo.port, rinfo.address));
   await new Promise((resolve, reject) => {
     server.once('error', reject);
-    server.bind(6606, '127.0.0.1', resolve);
+    server.bind(0, '127.0.0.1', resolve);
   });
-  const found = await discoverFan(mac, { host: '127.0.0.1', timeout: 1500 });
+  const discoveryPort = server.address().port;
+  const found = await discoverFan(mac, { host: '127.0.0.1', port: discoveryPort, timeout: 1500 });
   assert.deepEqual(found, { ip: '192.0.2.10', port: 6607, mac: '001122334455', productKey: 'p11vkW' });
 });
