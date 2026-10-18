@@ -1,6 +1,6 @@
 {
   "name": "homebridge-wonderfree-fan",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Local HomeKit support for Wonderfree/Quectel fans (tested with OmniBreeze DC2313R)",
   "main": "index.js",
   "bin": {

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 (2026-10-18)
+
+- Validate npm trusted publishing from GitHub Actions (OIDC). No functional changes.
+- Add npm/CI badges and publication notes.
+
 ## 0.1.0 (2026-10-18)
 
 - Initial public release.

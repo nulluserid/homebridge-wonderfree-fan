@@ -1,5 +1,8 @@
 # homebridge-wonderfree-fan
 
+[![npm version](https://img.shields.io/npm/v/homebridge-wonderfree-fan.svg)](https://www.npmjs.com/package/homebridge-wonderfree-fan)
+[![CI](https://github.com/nulluserid/homebridge-wonderfree-fan/actions/workflows/ci.yml/badge.svg)](https://github.com/nulluserid/homebridge-wonderfree-fan/actions/workflows/ci.yml)
+
 Local HomeKit control for **Wonderfree / Quectel** fans. Tested with the **OmniBreeze DC2313R** tower fan (Wonderfree product keys `p11vAZ` and `p11vkW`).
 
 > **Unofficial and reverse-engineered.** This project is not affiliated with, endorsed by, or supported by OmniBreeze, Quectel, or Acceleronix. Firmware updates can change the local protocol. Use at your own risk.
@@ -10,7 +13,9 @@ Local HomeKit control for **Wonderfree / Quectel** fans. Tested with the **OmniB
 - **Natural / Sleep / Auto** switches. All three off means **Normal**; they are mutually exclusive.
 - **Display** and **Sound** switches.
 - Room **temperature sensor** (°F or °C).
-- Fully local at runtime: UDP 6606 discovery, TCP 6607 control, AES-128-CBC per-device key.
+- Published from GitHub Actions using npm trusted publishing (OIDC).
+
+Fully local at runtime: UDP 6606 discovery, TCP 6607 control, AES-128-CBC per-device key.
 - Automatic rediscovery by MAC if DHCP changes the fan's address.
 - Homebridge Config UI schema; no cloud connection after setup.
 
