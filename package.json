@@ -1,0 +1,51 @@
+{
+  "name": "homebridge-wonderfree-fan",
+  "version": "0.1.0",
+  "description": "Local HomeKit support for Wonderfree/Quectel fans (tested with OmniBreeze DC2313R)",
+  "main": "index.js",
+  "bin": {
+    "wonderfree-fan-key": "tools/fetch-key.js"
+  },
+  "files": [
+    "index.js",
+    "protocol.js",
+    "config.schema.json",
+    "tools/fetch-key.js",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "test": "node --test test/protocol.test.js test/platform.test.js"
+  },
+  "engines": {
+    "node": ">=18",
+    "homebridge": ">=1.11.4"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "homebridge",
+    "homekit",
+    "wonderfree",
+    "quectel",
+    "omnibreeze",
+    "fan"
+  ],
+  "homebridge": {
+    "pluginType": "platform",
+    "pluginAlias": "WonderfreeFan"
+  },
+  "author": "Arthur Brownlee IV <iv@arthurbrownlee.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nulluserid/homebridge-wonderfree-fan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nulluserid/homebridge-wonderfree-fan/issues"
+  },
+  "homepage": "https://github.com/nulluserid/homebridge-wonderfree-fan#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}

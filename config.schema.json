@@ -1,0 +1,93 @@
+{
+  "pluginAlias": "WonderfreeFan",
+  "pluginType": "platform",
+  "singular": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Platform name",
+        "type": "string",
+        "default": "Wonderfree Fan"
+      },
+      "host": {
+        "title": "Fan IP address",
+        "type": "string",
+        "description": "Current LAN address of the fan. Discovery updates this automatically when deviceKey is set."
+      },
+      "deviceKey": {
+        "title": "Device key (MAC without separators)",
+        "type": "string",
+        "description": "The fan's Wi-Fi MAC, e.g. 001122334455. Used for UDP discovery and a stable accessory UUID."
+      },
+      "authKey": {
+        "title": "Local auth key",
+        "type": "string",
+        "description": "Base64 key from the one-time Wonderfree/Landbook cloud login. Treat it as a secret.",
+        "x-schema-form": {
+          "type": "password"
+        }
+      },
+      "port": {
+        "title": "Control port",
+        "type": "integer",
+        "default": 6607
+      },
+      "productKey": {
+        "title": "Product key (optional)",
+        "type": "string",
+        "description": "Informational; shown in the accessory model. Example: p11vkW."
+      },
+      "manufacturer": {
+        "title": "Manufacturer",
+        "type": "string",
+        "default": "Wonderfree"
+      },
+      "accessoryName": {
+        "title": "Accessory name",
+        "type": "string",
+        "default": "Wonderfree Fan"
+      },
+      "temperatureUnit": {
+        "title": "Fan temperature unit",
+        "type": "string",
+        "enum": ["F", "C"],
+        "default": "F",
+        "description": "Set to C if the fan/app reports Celsius."
+      },
+      "temperatureSensor": {
+        "title": "Expose temperature sensor",
+        "type": "boolean",
+        "default": true
+      },
+      "displaySwitch": {
+        "title": "Expose Display switch",
+        "type": "boolean",
+        "default": true
+      },
+      "soundSwitch": {
+        "title": "Expose Sound switch",
+        "type": "boolean",
+        "default": true
+      },
+      "modeSwitches": {
+        "title": "Expose Natural / Sleep / Auto switches",
+        "type": "boolean",
+        "default": true,
+        "description": "Mutually exclusive; all three off means Normal."
+      },
+      "discover": {
+        "title": "Rediscover by MAC if the IP changes",
+        "type": "boolean",
+        "default": true
+      },
+      "pollInterval": {
+        "title": "Poll interval (seconds)",
+        "type": "integer",
+        "default": 15,
+        "minimum": 5
+      }
+    },
+    "required": ["host", "deviceKey", "authKey"]
+  }
+}

@@ -1,0 +1,12 @@
+Portions of the protocol implementation and the one-time cloud login flow are
+derived from the following MIT-licensed reverse-engineering projects:
+
+- ha-omnibreeze-wonderfree
+  Copyright (c) 2026 Miguel Caravantes
+  https://github.com/miguelcaravantes/ha-omnibreeze-wonderfree
+
+- ha-oukitel-powerstation
+  https://github.com/bordeux/ha-oukitel-powerstation
+
+The cloud login constants in tools/fetch-key.js are the publicly documented
+values from that work. This project is an independent Homebridge implementation.
